@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be Yourself — The Many Lives of Henry</title>
+<style>
+:root{--bg:#0b1020;--card:#121a2f;--text:#f7f8ff;--muted:#aab2c8;--accent:#8b7cff;--accent2:#5de0c2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 80% 10%,#28205c 0,transparent 35%),var(--bg);color:var(--text)}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(11,16,32,.8);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}
+.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--accent2)}
+nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}nav a:hover{color:white}
+.hero{min-height:78vh;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:70px 8%}
+.eyebrow{color:var(--accent2);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:13px}
+h1{font-size:clamp(45px,7vw,82px);line-height:.96;margin:16px 0}.hero p{font-size:19px;line-height:1.7;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:14px;margin-top:28px}.btn{padding:14px 22px;border-radius:14px;text-decoration:none;font-weight:700;display:inline-block}.primary{background:var(--accent);color:white}.secondary{border:1px solid #ffffff20;color:white;background:#ffffff08}
+.book{justify-self:center;width:min(330px,75vw);aspect-ratio:2/3;position:relative;border-radius:8px 16px 16px 8px;background:linear-gradient(145deg,#25204f,#14172c 60%,#0d111e);box-shadow:25px 30px 60px #0008, inset 7px 0 0 #ffffff08;padding:34px 28px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.book:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,#fff2,transparent 55%);transform:translateX(-100%);animation:shine 5s infinite}
+@keyframes shine{65%,100%{transform:translateX(100%)}}
+.book h2{font-size:34px;line-height:1.05;margin:0}.book .rainbow{font-size:48px;letter-spacing:-10px}.book small{color:#cbd1e4;letter-spacing:2px}.author{font-weight:700}
+section{padding:90px 8%}.section-title{font-size:42px;margin:0 0 14px}.lead{color:var(--muted);max-width:700px;line-height:1.7}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px}.quote{background:var(--card);padding:32px;border-radius:24px;border:1px solid #ffffff0d;font-size:24px;line-height:1.4}
+.pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:30px}.page{background:#ffffff08;border:1px solid #ffffff10;border-radius:14px;padding:20px;text-decoration:none;color:white;transition:.2s}.page:hover{transform:translateY(-3px);background:#ffffff12}.page b{display:block;font-size:24px}.page span{color:var(--muted);font-size:13px}
+footer{text-align:center;padding:45px 8%;color:var(--muted);border-top:1px solid #ffffff10}
+@media(max-width:800px){.hero,.about{grid-template-columns:1fr}.hero{padding-top:55px}.book{order:-1;width:240px}nav a{margin-left:10px}.section-title{font-size:34px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">AZHAR<span>.</span></div>
+  <div><a href="#about">About</a><a href="#pages">Pages</a><a href="#read">Read</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">A story about becoming yourself</div>
+    <h1>Be Yourself:<br>The Many Lives of Henry</h1>
+    <p>A young reader's journey through imagination, courage, identity, and the many versions of who we can become.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#pages">Explore the 26 pages</a>
+      <a class="btn secondary" href="#about">About the book</a>
+    </div>
+  </div>
+  <div class="book" aria-label="Book cover">
+    <div><small>BE YOURSELF</small><div class="rainbow">◢ ◣</div><h2>The Many<br>Lives of Henry</h2></div>
+    <div class="author">By Azhar</div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="about">
+    <div>
+      <div class="eyebrow">The story</div>
+      <h2 class="section-title">One Henry. Many possibilities.</h2>
+      <p class="lead">Henry discovers that being yourself does not mean choosing only one version of who you are. Across 26 pages, imagination and everyday life meet as he learns to embrace his own path.</p>
+    </div>
+    <div class="quote">“You don't have to become someone else to become more yourself.”</div>
+  </div>
+</section>
+
+<section id="pages">
+  <div class="eyebrow">The book</div>
+  <h2 class="section-title">26 pages</h2>
+  <p class="lead">Choose a page to start exploring the story.</p>
+  <div class="pages">
+<a class="page" href="#read" onclick="showPage(1)"><b>1</b><span>Page 1</span></a><a class="page" href="#read" onclick="showPage(2)"><b>2</b><span>Page 2</span></a><a class="page" href="#read" onclick="showPage(3)"><b>3</b><span>Page 3</span></a><a class="page" href="#read" onclick="showPage(4)"><b>4</b><span>Page 4</span></a><a class="page" href="#read" onclick="showPage(5)"><b>5</b><span>Page 5</span></a><a class="page" href="#read" onclick="showPage(6)"><b>6</b><span>Page 6</span></a><a class="page" href="#read" onclick="showPage(7)"><b>7</b><span>Page 7</span></a><a class="page" href="#read" onclick="showPage(8)"><b>8</b><span>Page 8</span></a><a class="page" href="#read" onclick="showPage(9)"><b>9</b><span>Page 9</span></a><a class="page" href="#read" onclick="showPage(10)"><b>10</b><span>Page 10</span></a><a class="page" href="#read" onclick="showPage(11)"><b>11</b><span>Page 11</span></a><a class="page" href="#read" onclick="showPage(12)"><b>12</b><span>Page 12</span></a><a class="page" href="#read" onclick="showPage(13)"><b>13</b><span>Page 13</span></a><a class="page" href="#read" onclick="showPage(14)"><b>14</b><span>Page 14</span></a><a class="page" href="#read" onclick="showPage(15)"><b>15</b><span>Page 15</span></a><a class="page" href="#read" onclick="showPage(16)"><b>16</b><span>Page 16</span></a><a class="page" href="#read" onclick="showPage(17)"><b>17</b><span>Page 17</span></a><a class="page" href="#read" onclick="showPage(18)"><b>18</b><span>Page 18</span></a><a class="page" href="#read" onclick="showPage(19)"><b>19</b><span>Page 19</span></a><a class="page" href="#read" onclick="showPage(20)"><b>20</b><span>Page 20</span></a><a class="page" href="#read" onclick="showPage(21)"><b>21</b><span>Page 21</span></a><a class="page" href="#read" onclick="showPage(22)"><b>22</b><span>Page 22</span></a><a class="page" href="#read" onclick="showPage(23)"><b>23</b><span>Page 23</span></a><a class="page" href="#read" onclick="showPage(24)"><b>24</b><span>Page 24</span></a><a class="page" href="#read" onclick="showPage(25)"><b>25</b><span>Page 25</span></a><a class="page" href="#read" onclick="showPage(26)"><b>26</b><span>Page 26</span></a>
+  </div>
+</section>
+
+<section id="read">
+  <div class="eyebrow">Reader</div>
+  <h2 class="section-title" id="pageTitle">Page 1</h2>
+  <p class="lead" id="pageText">Henry looked at the world and wondered how many different stories could fit inside one person.</p>
+  <div class="buttons">
+    <button class="btn secondary" onclick="prevPage()">← Previous</button>
+    <button class="btn primary" onclick="nextPage()">Next →</button>
+  </div>
+</section>
+
+<footer>© 2026 Azhar · Be Yourself: The Many Lives of Henry</footer>
+
+<script>
+const texts=[
+"Henry looked at the world and wondered how many different stories could fit inside one person.",
+"He loved imagining impossible adventures, from secret caves to distant stars.",
+"At school, Henry sometimes wondered whether he had to act like everyone else.",
+"One afternoon, he decided to listen carefully to his own thoughts.",
+"He discovered that being different could also mean seeing things others missed.",
+"Henry began writing down the people he imagined becoming.",
+"Some were brave. Some were funny. Some were quiet thinkers.",
+"None of them felt exactly like the real Henry.",
+"That was when he realized he did not need to choose just one.",
+"Every day could teach him something new about himself.",
+"He could be curious without having every answer.",
+"He could be nervous and still try.",
+"He could make mistakes and learn from them.",
+"He could dream big while taking small steps.",
+"Henry stopped asking who he was supposed to be.",
+"Instead, he asked what kind of person he wanted to become.",
+"The question made the future feel wide open.",
+"His imagination became a place to explore, not a place to hide.",
+"Henry started noticing the little things that made him happy.",
+"He learned that confidence can grow slowly.",
+"He learned that kindness can be strong.",
+"He learned that his story did not have to look like anyone else's.",
+"Some days were easy. Some days were not.",
+"But every day gave Henry another chance to be himself.",
+"And with every new chapter, Henry understood himself a little more.",
+"His many lives were not different people. They were many possibilities inside one Henry."
+];
+let current=1;
+function showPage(n){current=n;document.getElementById('pageTitle').textContent='Page '+n;document.getElementById('pageText').textContent=texts[n-1];document.getElementById('read').scrollIntoView({behavior:'smooth'});}
+function nextPage(){showPage(current===26?1:current+1)}
+function prevPage(){showPage(current===1?26:current-1)}
+</script>
+</body>
+</html>
